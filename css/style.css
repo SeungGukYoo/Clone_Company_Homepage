@@ -61,6 +61,7 @@ a {
   transition: 0.7s;
 }
 #header .inner .centerMenu ul li a {
+  color: #333;
   display: block;
   transform: translateY(40%);
   height: 100%;
@@ -374,7 +375,7 @@ a {
   position: relative;
   width: 100%;
   padding: 140px 0;
-  background: url("http://www.asanpe.com/sh_img/index/main_banner/main_banner_02.jpg") no-repeat center/cover fixed;
+  background: url("../images/main_banner/main_banner_02.jpg") no-repeat center/cover fixed;
 }
 #news::after {
   width: 100%;
