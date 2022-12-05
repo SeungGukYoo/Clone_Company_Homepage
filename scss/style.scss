@@ -421,6 +421,7 @@ $mobileWeb: 539px;
   position: relative;
   width: 100%;
   padding: 140px 0;
+
   background: url("../images/main_banner/main_banner_02.jpg") no-repeat
     center/cover fixed;
 
@@ -815,8 +816,8 @@ $mobileWeb: 539px;
     margin-left: 0;
     width: 100%;
     height: 400px;
-    background: url("http://www.asanpe.com/sh_img/index/main_banner/main_banner_04.jpg")
-      no-repeat center/cover;
+    background: url("../images/main_banner/main_banner_04.jpg") no-repeat
+      center/cover;
     .swiperContainer {
       display: none;
     }
