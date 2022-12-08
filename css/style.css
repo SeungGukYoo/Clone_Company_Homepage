@@ -218,6 +218,7 @@ a {
   overflow: hidden;
   position: relative;
   width: 100%;
+  height: calc(100vh - 120px);
 }
 #figure .smallText {
   display: none;
@@ -236,59 +237,114 @@ a {
   color: #fff;
   font-size: 18px;
 }
-#figure .swiperContainer {
-  width: 80%;
-  overflow: hidden;
-  transform: translateX(30%);
-}
-#figure .swiperContainer .text {
+#figure .bigText {
   position: absolute;
+  left: 40%;
+  top: 30%;
   z-index: 10;
-  top: 35%;
-  left: 35%;
-  transform: translate(-35%, -35%);
 }
-#figure .swiperContainer .text h1 {
-  color: #fff;
-  font-size: 42px;
+#figure .bigText .text h1 {
+  color: #eee;
+  font-size: 38px;
   margin-bottom: 20px;
 }
-#figure .swiperContainer .text p {
-  color: #fff;
-  font-size: 24px;
+#figure .bigText .text p {
+  color: #eee;
+  font-size: 20px;
 }
-#figure .swiperContainer .swiper-wrapper {
+#figure .inner {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#figure .inner > div {
+  overflow: hidden;
   width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-#figure .swiperContainer .swiper-wrapper .swiper-slide .inner {
+#figure .inner > div ul {
+  width: 300%;
+  height: 100%;
+}
+#figure .inner > div ul li {
+  width: 33.3333333333%;
+  height: 100%;
+  display: block;
+  float: left;
+}
+#figure .inner > div ul li img {
   width: 100%;
-}
-#figure .swiperContainer .swiper-wrapper .swiper-slide .inner .con img {
+  height: 100%;
   object-fit: cover;
+}
+#figure .popUp {
+  position: absolute;
+  z-index: 5;
+  bottom: -5%;
+  left: 10vw;
+  width: 100%;
+  height: 250px;
+}
+#figure .popUp ul {
   width: 100%;
 }
-#figure .swiperContainer .swiper-button-prev {
-  color: #eee;
+#figure .popUp ul li {
+  float: left;
+  margin-right: 20px;
+  width: 12vw;
+  height: 12vh;
+  transition: 0.8;
+  transform: scale(0.9);
+}
+#figure .popUp ul li img {
+  filter: brightness(0.8);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#figure .popUp ul li.on {
+  transform: scale(1);
+}
+#figure .popUp ul li.on img {
+  filter: brightness(1.2);
+}
+#figure .prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 30vw;
+}
+#figure .prevBtn i {
+  transition: 0.5s;
   opacity: 0.7;
-  transform: scale(0.6);
-  transition: 0.8s;
-  right: 6%;
-}
-#figure .swiperContainer .swiper-button-prev:hover {
-  opacity: 1;
-}
-#figure .swiperContainer .swiper-button-next,
-#figure .swiperContainer .swiper-rtl.swiper-button-prev {
-  right: 6%;
-}
-#figure .swiperContainer .swiper-button-next {
+  font-size: 32px;
+  position: relative;
   color: #eee;
-  opacity: 0.7;
-  transform: scale(0.6);
-  transition: 1s;
+  cursor: pointer;
 }
-#figure .swiperContainer .swiper-button-next:hover {
+#figure .prevBtn i:hover {
   opacity: 1;
+  transform: translateX(-10%);
+}
+#figure .nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 8vw;
+}
+#figure .nextBtn i {
+  transition: 0.5s;
+  opacity: 0.7;
+  font-size: 32px;
+  position: relative;
+  color: #eee;
+  cursor: pointer;
+}
+#figure .nextBtn i:hover {
+  opacity: 1;
+  transform: translateX(10%);
 }
 
 #banner {
@@ -357,7 +413,7 @@ a {
   margin-top: 25px;
   padding-bottom: 25px;
   transition: 0.7s;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #eee;
 }
 #banner .inner .wrap article:last-child {
   margin-right: 0px;
@@ -466,7 +522,7 @@ a {
   width: 1180px;
 }
 #news .inner .simpleMenu div {
-  width: 33.333%;
+  width: 33.3333333333%;
   height: 100%;
   padding: 50px;
   float: left;
@@ -475,7 +531,6 @@ a {
 }
 #news .inner .simpleMenu div:last-child {
   border-right: 0;
-  width: 33.333%;
 }
 #news .inner .simpleMenu div h2 {
   margin-bottom: 20px;
@@ -598,26 +653,17 @@ a {
   #header .inner {
     width: 100%;
   }
-  #header .inner .centerMenu {
-    display: none;
-  }
+  #header .inner .centerMenu,
   #header .inner .contactBtn {
     display: none;
   }
-  #header .inner .menuBtn {
-    display: block;
-  }
+  #header .inner .menuBtn,
   #header .inner .sideMenu {
     display: block;
   }
-  #figure .swiperContainer .text {
-    top: 40%;
-  }
-  #figure .swiperContainer .text h1 {
-    font-size: 28px;
-  }
-  #figure .swiperContainer .text p {
-    font-size: 16px;
+  #figure {
+    width: 100%;
+    height: 70vh;
   }
   #banner {
     padding: 90px 0;
@@ -719,7 +765,11 @@ a {
     height: 400px;
     background: url("../images/main_banner/main_banner_04.jpg") no-repeat center/cover;
   }
-  #figure .swiperContainer {
+  #figure .bigText,
+  #figure .inner,
+  #figure .popUp,
+  #figure .prevBtn,
+  #figure .nextBtn {
     display: none;
   }
   #figure .smallText {
@@ -757,9 +807,11 @@ a {
   }
   #news .inner .simpleMenu {
     bottom: 40px;
+    height: 150px;
   }
   #news .inner .simpleMenu div {
     padding: 25px;
+    height: 100%;
   }
   #news .inner .simpleMenu div p {
     display: none;
@@ -782,6 +834,7 @@ a {
   #footer {
     padding: 50px 0 30px 0;
     width: 100%;
+    height: 100%;
   }
 }
 @media screen and (max-width: 539px) {
@@ -843,26 +896,23 @@ a {
   }
   #news .inner .simpleMenu {
     width: 100%;
-    height: 20%;
+    height: 70px;
     bottom: -20px;
   }
   #news .inner .simpleMenu div {
-    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
   }
   #news .inner .simpleMenu div h2 {
     font-size: 16px;
     text-align: center;
     margin-bottom: 0;
-    line-height: 45px;
-  }
-  #news .inner .simpleMenu div:last-child {
-    padding: 25px;
+    line-height: 40px;
   }
   #news .inner .simpleMenu div a {
     display: none;
-  }
-  #news .inner .simpleMenu div:nth-of-type(2) h2 {
-    line-height: 25px;
   }
   #footer {
     padding: 30px 0;

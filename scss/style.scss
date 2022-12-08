@@ -241,8 +241,8 @@ $mobileWeb: 539px;
 #figure {
   overflow: hidden;
   position: relative;
-
   width: 100%;
+  height: calc(100vh - 120px);
 
   // tablet, mobile 문구
   .smallText {
@@ -264,65 +264,117 @@ $mobileWeb: 539px;
   }
 
   // falf, quator 영상 및 문구
-  .swiperContainer {
-    width: 80%;
-    overflow: hidden;
-    transform: translateX(30%);
+  .bigText {
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    z-index: 10;
     .text {
-      position: absolute;
-      z-index: 10;
-      top: 35%;
-      left: 35%;
-      transform: translate(-35%, -35%);
       h1 {
-        color: #fff;
-        font-size: 42px;
+        color: #eee;
+        font-size: 38px;
         margin-bottom: 20px;
       }
       p {
-        color: #fff;
-        font-size: 24px;
+        color: #eee;
+        font-size: 20px;
       }
     }
+  }
 
-    // 슬라이더
-    .swiper-wrapper {
+  .inner {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    > div {
+      overflow: hidden;
       width: 80%;
-      .swiper-slide {
-        .inner {
-          width: 100%;
-          .con {
-            img {
-              object-fit: cover;
-              width: 100%;
-            }
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      ul {
+        width: 300%;
+        height: 100%;
+        li {
+          width: calc(100% / 3);
+          height: 100%;
+          display: block;
+          float: left;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
         }
       }
     }
-
-    // 슬라이더 버튼
-    .swiper-button-prev {
-      color: #eee;
-      opacity: 0.7;
-      transform: scale(0.6);
-      transition: 0.8s;
-      right: 6%;
-      &:hover {
-        opacity: 1;
+  }
+  .popUp {
+    position: absolute;
+    z-index: 5;
+    bottom: -5%;
+    left: 10vw;
+    width: 100%;
+    height: 250px;
+    ul {
+      width: 100%;
+      li {
+        float: left;
+        margin-right: 20px;
+        // min-width: 10vw;
+        // min-height: 10vh;
+        width: 12vw;
+        height: 12vh;
+        transition: 0.8;
+        transform: scale(0.9);
+        img {
+          filter: brightness(0.8);
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.on {
+          transform: scale(1);
+          img {
+            filter: brightness(1.2);
+          }
+        }
       }
     }
-    .swiper-button-next,
-    .swiper-rtl.swiper-button-prev {
-      right: 6%;
-    }
-    .swiper-button-next {
-      color: #eee;
+  }
+  .prevBtn {
+    position: absolute;
+    top: 50%;
+    left: 30vw;
+    i {
+      transition: 0.5s;
       opacity: 0.7;
-      transform: scale(0.6);
-      transition: 1s;
+      font-size: 32px;
+      position: relative;
+      color: #eee;
+      cursor: pointer;
       &:hover {
         opacity: 1;
+        transform: translateX(-10%);
+      }
+    }
+  }
+  .nextBtn {
+    position: absolute;
+    top: 50%;
+    right: 8vw;
+    i {
+      transition: 0.5s;
+      opacity: 0.7;
+      font-size: 32px;
+      position: relative;
+      color: #eee;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+        transform: translateX(10%);
       }
     }
   }
@@ -399,7 +451,7 @@ $mobileWeb: 539px;
           margin-top: 25px;
           padding-bottom: 25px;
           transition: 0.7s;
-          border-bottom: 1px solid #eee;
+          border-bottom: 2px solid #eee;
         }
         &:last-child {
           margin-right: 0px;
@@ -520,7 +572,7 @@ $mobileWeb: 539px;
       background-color: #fff;
       width: 1180px;
       div {
-        width: 33.333%;
+        width: calc(100% / 3);
         height: 100%;
         padding: 50px;
         float: left;
@@ -528,8 +580,6 @@ $mobileWeb: 539px;
         transition: 0.3s;
         &:last-child {
           border-right: 0;
-          // padding-right: 51px;
-          width: 33.333%;
         }
         h2 {
           margin-bottom: 20px;
@@ -689,15 +739,12 @@ $mobileWeb: 539px;
   #header {
     .inner {
       width: 100%;
-      .centerMenu {
-        display: none;
-      }
+      .centerMenu,
       .contactBtn {
         display: none;
       }
-      .menuBtn {
-        display: block;
-      }
+
+      .menuBtn,
       .sideMenu {
         display: block;
       }
@@ -705,17 +752,8 @@ $mobileWeb: 539px;
   }
   // figure
   #figure {
-    .swiperContainer {
-      .text {
-        top: 40%;
-        h1 {
-          font-size: 28px;
-        }
-        p {
-          font-size: 16px;
-        }
-      }
-    }
+    width: 100%;
+    height: 70vh;
   }
   // banner
   #banner {
@@ -828,9 +866,14 @@ $mobileWeb: 539px;
     height: 400px;
     background: url("../images/main_banner/main_banner_04.jpg") no-repeat
       center/cover;
-    .swiperContainer {
+    .bigText,
+    .inner,
+    .popUp,
+    .prevBtn,
+    .nextBtn {
       display: none;
     }
+
     .smallText {
       display: block;
     }
@@ -869,8 +912,11 @@ $mobileWeb: 539px;
       }
       .simpleMenu {
         bottom: 40px;
+        height: 150px;
         div {
           padding: 25px;
+          height: 100%;
+
           p {
             display: none;
           }
@@ -897,6 +943,11 @@ $mobileWeb: 539px;
   #footer {
     padding: 50px 0 30px 0;
     width: 100%;
+    height: 100%;
+    .inner {
+      .footerContact {
+      }
+    }
   }
 }
 
@@ -969,28 +1020,22 @@ $mobileWeb: 539px;
       }
       .simpleMenu {
         width: 100%;
-        height: 20%;
+        height: 70px;
         bottom: -20px;
         div {
-          padding: 25px;
-
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
           h2 {
             font-size: 16px;
             text-align: center;
             margin-bottom: 0;
-            line-height: 45px;
+            line-height: 40px;
           }
 
-          &:last-child {
-            padding: 25px;
-          }
           a {
             display: none;
-          }
-          &:nth-of-type(2) {
-            h2 {
-              line-height: 25px;
-            }
           }
         }
       }
