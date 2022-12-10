@@ -1,0 +1,202 @@
+#community {
+  width: 100%;
+  .subVisual {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: url(../images/main_banner/main_banner_02.jpg) no-repeat
+      center/cover fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #eee;
+    span {
+      margin-bottom: 5px;
+      font-family: bold;
+    }
+    h1 {
+      font: bold 42px/1 "arial";
+    }
+  }
+  .subTitle {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+
+    p {
+      padding-top: 30px;
+      height: 100%;
+      font: 699 18px/1 "arial";
+      color: #222;
+      border-bottom: 2px solid #000;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      background-color: #eee;
+      z-index: -1;
+      bottom: 0;
+    }
+  }
+
+  .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+    border-left: 2px solid #eee;
+    border-right: 2px solid #eee;
+    padding: 100px 50px 20px;
+    .container {
+      border-top: 1px solid #555;
+      table {
+        width: 100%;
+        thead {
+          border-top: 1px solid #000;
+          tr {
+            th {
+              padding: 20px;
+              border-bottom: 2px solid #eee;
+              &:nth-of-type(1) {
+                width: 10%;
+              }
+              &:nth-of-type(3) {
+                width: 15%;
+              }
+              &:nth-of-type(4) {
+                width: 15%;
+              }
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              text-align: center;
+              border-bottom: 1px solid #eee;
+              padding: 17px;
+              &:nth-of-type(1) {
+                color: #777;
+              }
+              &:nth-of-type(2) {
+                a {
+                  font: 600 15px/1 "arial";
+                  color: #000;
+                }
+              }
+              &:nth-of-type(3) {
+                color: #777;
+              }
+              &:nth-of-type(4) {
+                color: #777;
+              }
+            }
+            &:hover {
+              background-color: rgb(246, 244, 244);
+            }
+          }
+        }
+      }
+
+      .pageNation {
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .prev,
+        .next {
+          width: 35px;
+          height: 35px;
+          border: 1px solid rgb(208, 204, 204);
+          border-radius: 5px;
+          color: rgb(195, 194, 194);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 20px;
+        }
+        .number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a {
+            padding: 0 15px;
+            color: #777;
+          }
+          a.on {
+            color: #000;
+          }
+        }
+      }
+      > a {
+        width: 150px;
+        height: 50px;
+        display: block;
+        background-color: #313d77;
+        color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 70px;
+      }
+
+      .subBanner {
+        width: 100%;
+        padding: 100px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        article {
+          &.leftBox {
+            display: flex;
+            align-items: center;
+            .imgBox {
+              width: 150px;
+              img {
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+            p {
+              margin-left: 40px;
+              color: #555;
+              font-weight: 500;
+            }
+          }
+          &.rightBox {
+            float: right;
+            width: 400px;
+            padding: 20px;
+            text-align: center;
+            background-color: #eee;
+            border-radius: 10px;
+            margin-left: 20px;
+            p {
+              &:nth-of-type(1) {
+                margin-bottom: 20px;
+                font-size: 18px;
+              }
+              &:nth-of-type(2) {
+                margin-bottom: 20px;
+                font-size: 15px;
+                font-weight: bold;
+              }
+              &:nth-of-type(3) {
+                margin-bottom: 20px;
+                font-size: 15px;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

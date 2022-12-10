@@ -1,3 +1,189 @@
+#community {
+  width: 100%;
+}
+#community .subVisual {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: url(../images/main_banner/main_banner_02.jpg) no-repeat center/cover fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #eee;
+}
+#community .subVisual span {
+  margin-bottom: 5px;
+  font-family: bold;
+}
+#community .subVisual h1 {
+  font: bold 42px/1 "arial";
+}
+#community .subTitle {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+#community .subTitle p {
+  padding-top: 30px;
+  height: 100%;
+  font: 699 18px/1 "arial";
+  color: #222;
+  border-bottom: 2px solid #000;
+}
+#community .subTitle::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: #eee;
+  z-index: -1;
+  bottom: 0;
+}
+#community .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  border-left: 2px solid #eee;
+  border-right: 2px solid #eee;
+  padding: 100px 50px 20px;
+}
+#community .inner .container {
+  border-top: 1px solid #555;
+}
+#community .inner .container table {
+  width: 100%;
+}
+#community .inner .container table thead {
+  border-top: 1px solid #000;
+}
+#community .inner .container table thead tr th {
+  padding: 20px;
+  border-bottom: 2px solid #eee;
+}
+#community .inner .container table thead tr th:nth-of-type(1) {
+  width: 10%;
+}
+#community .inner .container table thead tr th:nth-of-type(3) {
+  width: 15%;
+}
+#community .inner .container table thead tr th:nth-of-type(4) {
+  width: 15%;
+}
+#community .inner .container table tbody tr td {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding: 17px;
+}
+#community .inner .container table tbody tr td:nth-of-type(1) {
+  color: #777;
+}
+#community .inner .container table tbody tr td:nth-of-type(2) a {
+  font: 600 15px/1 "arial";
+  color: #000;
+}
+#community .inner .container table tbody tr td:nth-of-type(3) {
+  color: #777;
+}
+#community .inner .container table tbody tr td:nth-of-type(4) {
+  color: #777;
+}
+#community .inner .container table tbody tr:hover {
+  background-color: rgb(246, 244, 244);
+}
+#community .inner .container .pageNation {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+#community .inner .container .pageNation .prev,
+#community .inner .container .pageNation .next {
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgb(208, 204, 204);
+  border-radius: 5px;
+  color: rgb(195, 194, 194);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+#community .inner .container .pageNation .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#community .inner .container .pageNation .number a {
+  padding: 0 15px;
+  color: #777;
+}
+#community .inner .container .pageNation .number a.on {
+  color: #000;
+}
+#community .inner .container > a {
+  width: 150px;
+  height: 50px;
+  display: block;
+  background-color: #313d77;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 70px;
+}
+#community .inner .container .subBanner {
+  width: 100%;
+  padding: 100px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#community .inner .container .subBanner article.leftBox {
+  display: flex;
+  align-items: center;
+}
+#community .inner .container .subBanner article.leftBox .imgBox {
+  width: 150px;
+}
+#community .inner .container .subBanner article.leftBox .imgBox img {
+  width: 100%;
+  object-fit: cover;
+}
+#community .inner .container .subBanner article.leftBox p {
+  margin-left: 40px;
+  color: #555;
+  font-weight: 500;
+}
+#community .inner .container .subBanner article.rightBox {
+  float: right;
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+#community .inner .container .subBanner article.rightBox p:nth-of-type(1) {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+#community .inner .container .subBanner article.rightBox p:nth-of-type(2) {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+#community .inner .container .subBanner article.rightBox p:nth-of-type(3) {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +199,14 @@ li {
 a {
   text-decoration: none;
   outline: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.hidden {
+  display: none;
 }
 
 #header {

@@ -1,3 +1,10 @@
+@import "community.scss";
+
+$quatorWeb: 1500px;
+$halfWeb: 1180px;
+$tabletWeb: 820px;
+$mobileWeb: 539px;
+
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +22,13 @@ a {
   outline: none;
 }
 
-$quatorWeb: 1500px;
-$halfWeb: 1180px;
-$tabletWeb: 820px;
-$mobileWeb: 539px;
+table {
+  border-collapse: collapse;
+}
+
+.hidden {
+  display: none;
+}
 
 // HEADER
 #header {
