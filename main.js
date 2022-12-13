@@ -3,8 +3,8 @@ const prevBtn = document.querySelector(".prevBtn");
 const nextBtn = document.querySelector(".nextBtn");
 const ul = document.querySelector("#figure .inner ul");
 
-ul.prepend(ul.lastElementChild);
 ul.style.marginLeft = "-100%";
+ul.prepend(ul.lastElementChild);
 prevBtn.addEventListener("click", () => {
   new Anim(ul, {
     prop: "margin-left",
