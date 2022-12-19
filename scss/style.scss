@@ -4,6 +4,7 @@ $tabletWeb: 820px;
 $mobileWeb: 539px;
 
 @import "community.scss";
+@import "estimate.scss";
 
 * {
   margin: 0;
@@ -24,6 +25,10 @@ a {
 
 table {
   border-collapse: collapse;
+}
+
+fieldset {
+  border: none;
 }
 
 .hidden {

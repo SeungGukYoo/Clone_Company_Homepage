@@ -270,6 +270,174 @@
     margin-left: 0px;
   }
 }
+#join {
+  width: 100%;
+}
+#join .subVisual {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: url(../images/main_banner/main_banner_02.jpg) no-repeat center/cover fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #eee;
+}
+#join .subVisual span {
+  margin-bottom: 5px;
+  font-family: bold;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(-100%);
+}
+#join .subVisual span.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+#join .subVisual h1 {
+  font: bold 42px/1 "arial";
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(100%);
+}
+#join .subVisual h1.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+#join .subTitle {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+#join .subTitle p {
+  padding-top: 30px;
+  height: 100%;
+  font: 699 18px/1 "arial";
+  color: #222;
+  border-bottom: 2px solid #000;
+}
+#join .subTitle::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: #eee;
+  z-index: -1;
+  bottom: 0;
+}
+#join .inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 100px 50px 20px;
+}
+#join .inner fieldset h2 {
+  font: bold 18px/1 "arial";
+  color: #555;
+  margin-bottom: 20px;
+}
+#join .inner fieldset h2:nth-of-type(2) {
+  margin-top: 40px;
+}
+#join .inner fieldset #terms1,
+#join .inner fieldset #terms2 {
+  width: 100%;
+  height: 300px;
+  resize: none;
+  padding: 20px;
+  font: 12px/1.3 "arial";
+  color: #888;
+  background-color: #eee;
+}
+#join .inner fieldset .agreement {
+  margin-bottom: 30px;
+  float: right;
+}
+#join .inner fieldset table {
+  width: 100%;
+  border-top: 2px solid #999;
+  border-bottom: 2px solid #999;
+}
+#join .inner fieldset table th {
+  width: 20%;
+  padding: 20px 30px;
+  font: bold 14px/1 "arial";
+  color: #666;
+  text-align: left;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  background-color: #eee;
+}
+#join .inner fieldset table th:last-child {
+  text-align: center;
+  border: none;
+  background-color: #fff;
+}
+#join .inner fieldset table th input[type=submit],
+#join .inner fieldset table th input[type=reset] {
+  width: 150px;
+  height: 40px;
+  border: none;
+  background-color: #444;
+  color: #fff;
+  margin: 0 10px;
+  font: 14px/1 "arial";
+  cursor: pointer;
+}
+#join .inner fieldset table td {
+  border-bottom: 1px solid #bbb;
+  padding: 20px 30px;
+}
+#join .inner fieldset table td input[type=text],
+#join .inner fieldset table td input[type=email],
+#join .inner fieldset table td input[type=password],
+#join .inner fieldset table td input[type=tel],
+#join .inner fieldset table td input[type=date] {
+  width: 30%;
+  height: 30px;
+  border: 1px solid #bbb;
+  padding-left: 20px;
+}
+#join .inner fieldset table td input[type=email] {
+  min-width: 160px;
+}
+#join .inner fieldset table td input[type=password] {
+  width: 40%;
+  min-width: 300px;
+}
+#join .inner fieldset table td input[type=checkbox],
+#join .inner fieldset table td input[type=radio] {
+  margin-right: 5px;
+}
+#join .inner fieldset table td input[type=tel] {
+  width: 18%;
+  min-width: 130px;
+}
+#join .inner fieldset table td input[type=date] {
+  width: 20%;
+  font-family: "arial";
+  min-width: 140px;
+}
+#join .inner fieldset table td label {
+  margin-right: 30px;
+}
+#join .inner fieldset table td textarea#custom {
+  width: 80%;
+  height: 200px;
+  border: 1px solid #bbb;
+  resize: none;
+  background-color: #eeffff;
+  padding: 20px;
+}
+
+@media screen and (max-width: 539px) {
+  #join .inner {
+    padding: 100px 10px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -289,6 +457,10 @@ a {
 
 table {
   border-collapse: collapse;
+}
+
+fieldset {
+  border: none;
 }
 
 .hidden {
