@@ -1,9 +1,9 @@
-@import "community.scss";
-
 $quatorWeb: 1500px;
 $halfWeb: 1180px;
 $tabletWeb: 820px;
 $mobileWeb: 539px;
+
+@import "community.scss";
 
 * {
   margin: 0;
