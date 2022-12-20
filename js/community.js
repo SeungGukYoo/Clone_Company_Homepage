@@ -16,9 +16,3 @@ setTimeout(() => {
     menuBtn.classList.toggle("active");
   });
 })();
-
-function activeSmallBanner(list) {
-  const index = list.dataset.index;
-  lists.forEach((list) => list.classList.remove("on"));
-  lists[index - 1].classList.add("on");
-}
