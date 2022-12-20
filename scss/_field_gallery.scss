@@ -1,0 +1,222 @@
+#gallery {
+  width: 100%;
+  .subVisual {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: url(../images/main_banner/main_banner_02.jpg) no-repeat
+      center/cover fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #eee;
+    span {
+      margin-bottom: 5px;
+      font-family: bold;
+      opacity: 0;
+      transition: 0.5s;
+      transform: translateY(-100%);
+      &.on {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+    h1 {
+      font: bold 42px/1 "arial";
+      opacity: 0;
+      transition: 0.5s;
+      transform: translateY(100%);
+      &.on {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+  }
+  .subTitle {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+
+    p {
+      padding-top: 30px;
+      height: 100%;
+      font: 699 18px/1 "arial";
+      color: #222;
+      border-bottom: 2px solid #000;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      background-color: #eee;
+      z-index: -1;
+      bottom: 0;
+    }
+  }
+  .inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 100px 0;
+    #searchBox {
+      float: right;
+      position: relative;
+      z-index: 20;
+      #search {
+        width: 170px;
+        height: 30px;
+        font: normal 15px/30px "arial";
+        padding-left: 20px;
+        border: 1px solid rgb(201, 201, 201);
+      }
+      .searchBtn {
+        width: 60px;
+        height: 30px;
+        font: bold 12px/30px "arial";
+        border: 1px solid rgb(201, 201, 201);
+        color: #fff;
+        background-color: #333;
+        margin-left: 0px;
+        margin-right: 10px;
+        vertical-align: top;
+      }
+    }
+    .wrap {
+      width: 100%;
+      padding: 50px;
+      position: relative;
+      .loading {
+        width: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        transition: 1s;
+        &.off {
+          opacity: 0;
+        }
+      }
+      #list {
+        width: 100%;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: 1s;
+        &.on {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+        li {
+          float: left;
+          width: calc(100% / 4);
+          padding: 10px;
+          div {
+            width: 100%;
+            padding: 20px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            cursor: pointer;
+            a {
+              > img {
+                width: 100%;
+              }
+            }
+          }
+          p {
+            font: 12px/1.2 "arial";
+            color: #777;
+            margin-top: 10px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .pop {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box {
+      width: 100%;
+      height: 100%;
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .close {
+      position: absolute;
+      top: 40px;
+      right: 50px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media screen and (max-width: $halfWeb) {
+  #gallery {
+    .inner {
+      .wrap {
+        #list {
+          li {
+            width: calc(100% / 3);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tabletWeb) {
+  #gallery {
+    .inner {
+      .wrap {
+        #list {
+          li {
+            width: calc(100% / 2);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobileWeb) {
+  #gallery {
+    .inner {
+      .wrap {
+        #list {
+          li {
+            width: 100%;
+            p {
+              font: 14px/1.2 "arial";
+            }
+          }
+        }
+      }
+    }
+  }
+}
