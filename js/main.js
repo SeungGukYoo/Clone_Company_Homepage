@@ -47,16 +47,6 @@ setInterval(() => {
   });
 }, 7000);
 
-(function btnAddActive() {
-  const menuBtn = document.querySelector(".menuBtn");
-  const sideMenu = document.querySelector(".sideMenu");
-  menuBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    sideMenu.classList.toggle("active");
-    menuBtn.classList.toggle("active");
-  });
-})();
-
 function activeSmallBanner(list) {
   const index = list.dataset.index;
   lists.forEach((list) => list.classList.remove("on"));

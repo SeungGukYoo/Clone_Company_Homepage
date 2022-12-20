@@ -10,13 +10,6 @@ const baseUrl = "https://www.flickr.com/services/rest/?";
 const trand_pic = "flickr.interestingness.getList";
 const maxCount = 25;
 const trand_url = `${baseUrl}method=${trand_pic}&api_key=${key}&per_page=${maxCount}&format=json&nojsoncallback=1`;
-const subVisual_h1 = document.querySelector(".subVisual h1");
-const subVisual_span = document.querySelector(".subVisual span");
-
-setTimeout(() => {
-  subVisual_h1.classList.add("on");
-  subVisual_span.classList.add("on");
-}, 300);
 
 callPicture(trand_url);
 searchBtn.addEventListener("click", (e) => {
