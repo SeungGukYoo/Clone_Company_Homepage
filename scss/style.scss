@@ -3,10 +3,11 @@ $halfWeb: 1180px;
 $tabletWeb: 820px;
 $mobileWeb: 539px;
 
-@import "community.scss";
-@import "estimate.scss";
-@import "field_gallery.scss";
-@import "company.scss";
+@import 'community.scss';
+@import 'estimate.scss';
+@import 'field_gallery.scss';
+@import 'company.scss';
+@import 'product.scss';
 
 * {
   margin: 0;
@@ -86,7 +87,7 @@ fieldset {
             display: block;
             transform: translateY(40%);
             height: 100%;
-            font: bold 18px/1 "arial";
+            font: bold 18px/1 'arial';
           }
           &:hover {
             background-color: #313d77;
@@ -107,7 +108,7 @@ fieldset {
       transform: translateY(-50%);
       background: #313d77;
       color: #fff;
-      font: bold 12px/1 "arial";
+      font: bold 12px/1 'arial';
       letter-spacing: 1px;
       width: 120px;
       height: 40px;
@@ -149,7 +150,7 @@ fieldset {
         height: 2px;
         background-color: #000;
         display: block;
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         right: 0;
@@ -160,7 +161,7 @@ fieldset {
         height: 2px;
         background-color: #000;
         display: block;
-        content: "";
+        content: '';
         position: absolute;
         bottom: 0;
         right: 0;
@@ -216,7 +217,7 @@ fieldset {
           border-top: 2px solid #eee;
           transition: 0.2s;
           a {
-            font: bold 14px/60px "arial";
+            font: bold 14px/60px 'arial';
             color: #313d77;
           }
           &:hover {
@@ -242,7 +243,7 @@ fieldset {
             transition: 0.2s;
             a {
               color: #313d77;
-              font: bold 13px/1 "arial";
+              font: bold 13px/1 'arial';
             }
             &:hover {
               transform: scale(1.1);
@@ -487,7 +488,7 @@ fieldset {
       &::after {
         clear: both;
         display: block;
-        content: "";
+        content: '';
       }
     }
   }
@@ -499,15 +500,14 @@ fieldset {
   width: 100%;
   padding: 140px 0;
 
-  background: url("../images/main_banner/main_banner_02.jpg") no-repeat
-    center/cover fixed;
+  background: url('../images/main_banner/main_banner_02.jpg') no-repeat center/cover fixed;
 
   // 중앙의 세로선
   &::after {
     width: 100%;
     height: 1px;
     display: block;
-    content: "";
+    content: '';
     background-color: #777;
     position: absolute;
     top: 55%;
@@ -550,7 +550,7 @@ fieldset {
         }
       }
       &::after {
-        content: "";
+        content: '';
         display: block;
         margin-top: 70px;
       }
@@ -608,7 +608,7 @@ fieldset {
         }
         a {
           color: #000;
-          font: bold 17px/1 "arial";
+          font: bold 17px/1 'arial';
           i {
             float: right;
           }
@@ -624,7 +624,7 @@ fieldset {
       }
       &::after {
         display: block;
-        content: "";
+        content: '';
         clear: both;
       }
     }
@@ -701,7 +701,7 @@ fieldset {
     }
     // float 초기화
     &::after {
-      content: "";
+      content: '';
       display: block;
       clear: both;
     }
@@ -881,8 +881,7 @@ fieldset {
     margin-left: 0;
     width: 100%;
     height: 400px;
-    background: url("../images/main_banner/main_banner_04.jpg") no-repeat
-      center/cover;
+    background: url('../images/main_banner/main_banner_04.jpg') no-repeat center/cover;
     .bigText,
     .inner,
     .popUp,
